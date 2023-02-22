@@ -8,6 +8,14 @@ This action uploads a software bill of materials file to a Dependency-Track serv
 
 **Required** Dependency-Track hostname
 
+### `cfclientid`
+
+**Required** CF Access Client ID
+
+### `cfclientsecret`
+
+**Required** CF Access Client Secret
+
 ### `port`
 
 Defaults to 443
@@ -46,19 +54,23 @@ Path and filename of the BOM, default `bom.xml`
 
 With project name and version:
 ```
-uses: DependencyTrack/gh-upload-sbom@v1.0.0
+uses: resilience-jychp/gh-upload-sbom@v1.0.0
 with:
   serverhostname: 'example.com'
   apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+  cfclientid: ${{ secrets.CF_CLIENT_ID }}
+  cfclientsecret: ${{ secrets.CF_CLIENT_SECRET }}
   projectname: 'Example Project'
   projectversion: 'master'
 ```
 
 With project uuid:
 ```
-uses: DependencyTrack/gh-upload-sbom@v1.0.0
+uses: resilience-jychp/gh-upload-sbom@v1.0.0
 with:
   serverhostname: 'example.com'
   apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+  cfclientid: ${{ secrets.CF_CLIENT_ID }}
+  cfclientsecret: ${{ secrets.CF_CLIENT_SECRET }}
   project: 'dadec8ad-7053-4e8c-8044-7b6ef698e08d'
 ```
