@@ -5,6 +5,12 @@ inputs:
   serverhostname:
     description: 'Dependency-Track hostname'
     required: true
+  cfclientid:
+    description: 'CF Access Client ID'
+    required: true
+  cfclientsecret:
+    description: 'CF Access Client Secret'
+    required: true
   port:
     description: 'Dependency-Track port'
     required: false

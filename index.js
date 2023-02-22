@@ -13,6 +13,8 @@ try {
   const projectVersion = core.getInput('projectversion');
   const autoCreate = core.getInput('autocreate') != 'false';
   const bomFilename = core.getInput('bomfilename');
+  const cfClientId = core.getInput('cfclientid')
+  const cfClientSecret = core.getInput('cfclientsecret')
 
 
   if (protocol != "http" && protocol != "https") {
@@ -49,6 +51,8 @@ try {
     method: 'PUT',
     headers: {
       'X-API-Key': apiKey,
+      'CF-Access-Client-Id': cfClientId,
+      'CF-Access-Client-Secret': cfClientSecret,
       'Content-Type': 'application/json',
       'Content-Length': Buffer.byteLength(postData)
     }
