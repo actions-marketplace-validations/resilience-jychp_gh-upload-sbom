@@ -1,0 +1,10 @@
+{
+  "name": "Upload BOM to Dependency-Track (behind Cloudflare)",
+  "version": "1.0.1",
+  "description": "This action uploads a software bill of materials file to a Dependency-Track server behind Cloudflare Access.",
+  "main": "index.js",
+  "author": "Jeremy Chapeau",
+  "dependencies": {
+    "@actions/core": "1.2.4",
+  }
+}
